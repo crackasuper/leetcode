@@ -1,5 +1,10 @@
-class Solution:
-    def findRelativeRanks(self, score: List[int]) -> List[str]:
+class Solution(object):
+    def findRelativeRanks(self, score):
+        """
+        :type score: List[int]
+        :rtype: List[str]
+        """
+
         n = len(score)
         res = [''] * n
         indices = list(range(n))
@@ -15,3 +20,5 @@ class Solution:
                 res[indices[i]] = str(i + 1)
        
         return res
+
+        
