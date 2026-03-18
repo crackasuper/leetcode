@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/pancake-sorting/">969. Pancake Sorting</a></h2><h3>Medium</h3><hr><div><p>Given an array of integers <code>arr</code>, sort the array by performing a series of <strong>pancake flips</strong>.</p>
+<h2><a href="https://leetcode.com/problems/pancake-sorting/">969. Pancake Sorting</a></h2><h3>Medium</h3><hr><p>Given an array of integers <code>arr</code>, sort the array by performing a series of <strong>pancake flips</strong>.</p>
 
 <p>In one pancake flip we do the following steps:</p>
 
@@ -14,7 +14,8 @@
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> arr = [3,2,4,1]
+<pre>
+<strong>Input:</strong> arr = [3,2,4,1]
 <strong>Output:</strong> [4,2,4,3]
 <strong>Explanation: </strong>
 We perform 4 pancake flips, with k values 4, 2, 4, and 3.
@@ -27,7 +28,8 @@ After 4th flip (k = 3): arr = [<u>1</u>, <u>2</u>, <u>3</u>, 4], which is sorted
 
 <p><strong class="example">Example 2:</strong></p>
 
-<pre><strong>Input:</strong> arr = [1,2,3]
+<pre>
+<strong>Input:</strong> arr = [1,2,3]
 <strong>Output:</strong> []
 <strong>Explanation: </strong>The input is already sorted, so there is no need to flip anything.
 Note that other answers, such as [3, 3], would also be accepted.
@@ -41,4 +43,3 @@ Note that other answers, such as [3, 3], would also be accepted.
 	<li><code>1 &lt;= arr[i] &lt;= arr.length</code></li>
 	<li>All integers in <code>arr</code> are unique (i.e. <code>arr</code> is a permutation of the integers from <code>1</code> to <code>arr.length</code>).</li>
 </ul>
-</div>
