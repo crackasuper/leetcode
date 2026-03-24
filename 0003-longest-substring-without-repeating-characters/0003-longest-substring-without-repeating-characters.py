@@ -1,5 +1,10 @@
-class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+
         chars = set()
         l, res = 0, 0
         for r in range(len(s)):
@@ -9,4 +14,8 @@ class Solution:
             chars.add(s[r])
             res = max(res, r -l +1)
         return res
+
+
+
+
         
