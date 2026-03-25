@@ -1,22 +1,26 @@
-class Solution:
-  def numberOfSubarrays(self, nums: List[int], k: int) -> int:
-    def numberOfSubarraysAtMost(k: int) -> int:
-      ans = 0
-      l = 0
-      r = 0
+class Solution(object):
+    def numberOfSubarrays(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        prefix_count = Counter({0: 1})
+      
 
-      while r <= len(nums):
-        if k >= 0:
-          ans += r - l
-          if r == len(nums):
-            break
-          if nums[r] & 1:
-            k -= 1
-          r += 1
-        else:
-          if nums[l] & 1:
-            k += 1
-          l += 1
-      return ans
+        result = 0
+      
+ 
+        odd_count = 0
+      
+  
+        for num in nums:
+            odd_count += num & 1
+            result += prefix_count[odd_count - k]
+          
+            prefix_count[odd_count] += 1
+      
+        return result
 
-    return numberOfSubarraysAtMost(k) - numberOfSubarraysAtMost(k - 1)
+
+        
