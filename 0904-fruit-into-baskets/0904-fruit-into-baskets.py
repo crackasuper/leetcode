@@ -1,5 +1,10 @@
-class Solution:
-    def totalFruit(self, fruits: List[int]) -> int:
+class Solution(object):
+    def totalFruit(self, fruits):
+        """
+        :type fruits: List[int]
+        :rtype: int
+        """
+        
         max_fruits = 0
         basket = {}
         left = 0
@@ -15,4 +20,3 @@ class Solution:
             max_fruits = max(max_fruits, right - left + 1)
 
         return max_fruits
-        
