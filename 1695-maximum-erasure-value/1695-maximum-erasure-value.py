@@ -1,5 +1,10 @@
-class Solution:
+class Solution(object):
     def maximumUniqueSubarray(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+
         dataset = set()
         n = len(nums)
         max_sum = 0
