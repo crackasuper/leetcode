@@ -4,13 +4,12 @@ class ListNode:
     self.val = x
     self.next = None
 
-
 class MyLinkedList:
   def __init__(self):
     self.length = 0
     self.dummy = ListNode(0)
 
-  def get(self, index: int) -> int:
+  def get(self, index):
     if index < 0 or index >= self.length:
       return -1
     curr = self.dummy.next
@@ -18,20 +17,20 @@ class MyLinkedList:
       curr = curr.next
     return curr.val
 
-  def addAtHead(self, val: int) -> None:
+  def addAtHead(self, val):
     curr = self.dummy.next
     self.dummy.next = ListNode(val)
     self.dummy.next.next = curr
     self.length += 1
 
-  def addAtTail(self, val: int) -> None:
+  def addAtTail(self, val):
     curr = self.dummy
     while curr.next:
       curr = curr.next
     curr.next = ListNode(val)
     self.length += 1
 
-  def addAtIndex(self, index: int, val: int) -> None:
+  def addAtIndex(self, index, val):
     if index > self.length:
       return
     curr = self.dummy
@@ -42,7 +41,7 @@ class MyLinkedList:
     curr.next.next = temp
     self.length += 1
 
-  def deleteAtIndex(self, index: int) -> None:
+  def deleteAtIndex(self, index):
     if index < 0 or index >= self.length:
       return
     curr = self.dummy
