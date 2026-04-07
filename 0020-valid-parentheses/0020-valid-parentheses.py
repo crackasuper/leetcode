@@ -1,13 +1,23 @@
-class Solution:
-  def isValid(self, s: str) -> bool:
-    stack = []
-    for i in s:
-        if i == '(':
-            stack.append(')')
-        elif i == "[":
-            stack.append(']')
-        elif i == '{':
-            stack.append('}')
-        elif not stack or stack.pop() != i:
-            return False
-    return not stack
+class Solution(object):
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        stack = []
+
+        for idx in s:
+            if idx == '(':
+                stack.append(")")
+
+            elif idx == '{':
+                stack.append("}")
+
+            elif idx == '[':
+                stack.append("]")
+            
+            elif not stack or stack.pop() != idx:
+                return False
+
+        return not stack
+        
